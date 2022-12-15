@@ -1,0 +1,50 @@
+git init -> inicia repositorio
+git add biografía.txt  -> agregar un solo archivo
+git add . -> agrega todos los archivos que hallan tenido cambios
+git commit -m "versión 1" -> comentar hacer commit
+git statut -> ver el estatus
+git show -> muestra todos los cambios hechos
+git log biografia.txt -> muestra todos los cambios hechos a este solo archivo 
+git push -> subir a remoto
+
+history -> en gitbash mira la historia de todos los comandos utilizados
+!+numero del comando -> utilizo el comando 
+
+git config -l -> muestra las configuraciones de config en lista
+git config --global user.name "Jorge Ricardo" -> Colocamos el usuario de Git
+git config --global user.email "Jandricardov@gmail.com" -> Colocamos el email de git
+git config --list - Listado de configuración de git en el equipo
+git log historia.txt -> Me muestra todos los cambios hechos en el archivo
+
+git diff 95bc478bd743e5370ef0e09304ddc9116ae6c2af d67fc54ecd3052fe32ad5f7c2f37162e915a3e85 --> cambios entre versiones específicas 
+git reset 95bc478bd743e5370ef0e09304ddc9116ae6c2af --hard -> reset duro, que todo vuelve a como estaba en la versión pasada en la linea de comando, borra todo lo que se hizo antes que no aparecen ni en los logs
+git log --stat --> podremos ver los cambios específicos despues de cada commit
+git checkout d67fc54ecd3052fe32ad5f7c2f37162e915a3e85 historia.txt --> devuelve el archivo en esta versión, lo deja en backstage hasta hacer el commit
+git checkout master historia.txt --> me trae el archivo actual de la rama master
+git rm --cached: Elimina los archivos de nuestro repositorio local y del área de staging, pero los mantiene en nuestro disco duro. Básicamente le dice a Git que deje de trackear el historial de cambios de estos archivos, por lo que pasaran a un estado untracked.
+git rm --force: Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarl
+git reset volvemos al pasado sin la posibilidad de volver al futuro. Borramos la historia y la debemos sobreescribir. No hay vuelta atrás.
+git reset --soft: Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+git reset --hard: Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
+git reset HEAD: Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
+
+
+*********GIT PARA REPOSITORIOS REMOTOS******
+git clone url --> Para clonar un repositorio remoto en tu directorio de trabajo y crear un seguimiento de versiones en un repositorio local
+git add -> igual que antes
+git commit -> Igual que antes
+git push -> Enviar los cambios realizados al repositorio remoto
+git fetch -> trae la ultima actualización a tu repositorio local que luego deberás fusionar con tu parte del trabajo
+git merge 
+git pull -> Hace un fetch y merge al mismo tiempo
+
+
+git branch cabecera -> creamos una rama llamada cabecera
+git checkout cabecera -> nos movemos a la rama de cabecera
+git commit -am "commit aca" -> agrega y hace commit de archivos existentes
+
+git merge cabecera -> nos ubicamos en master y corremos este comando para fusionar los cambios de cabecera con master
+git remote add origin https://github.com/MrRickFt/blogspot.git -> Conectarse al repositorio remoto de github
+git remote -v -> muestra la conexión actual al repo
+git pull origin main -> traer lo que tiene el repo
+git pull origin main --allow-unrelated-histories -> acepta historias
