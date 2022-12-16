@@ -48,3 +48,13 @@ git remote add origin https://github.com/MrRickFt/blogspot.git -> Conectarse al 
 git remote -v -> muestra la conexión actual al repo
 git pull origin main -> traer lo que tiene el repo
 git pull origin main --allow-unrelated-histories -> acepta historias
+
+/**** Llaves publicas y privadas ****/
+Crear llave por ssh: ssh-keygen -t rsa -b 4096 -C "jandricardov@gmail.com"
+revisamos que el servidor de ssh esté prendido: eval $(ssh-agent -s)
+agregar la llave privada a nuestro sistema: ssh-add ~/.ssh/id_rsa
+La agregamos a setting de github posteriormente
+y luego en la carpeta del proyecto setteamos la conexión nueva ssh: git remote set-url origin git@github.com:MrRickFt/Git-Github.git
+corroboramos la conexión: git remote -v
+Hacemos pull y aceptamos:  git pull 
+Luego fusionamos: git pull origin main
