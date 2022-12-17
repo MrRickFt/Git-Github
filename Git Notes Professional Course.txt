@@ -58,3 +58,20 @@ y luego en la carpeta del proyecto setteamos la conexión nueva ssh: git remote 
 corroboramos la conexión: git remote -v
 Hacemos pull y aceptamos:  git pull 
 Luego fusionamos: git pull origin main
+
+/********* Tags y versiones en git ****/
+Para ver como se ha comportado el repo y cuales han sido sus ediciones: git log --all --graph --decorate --oneline
+Podemos asignar este comando a una variable y llamar siempre la variable: alias arbolito="git log --all --graph --decorate --oneline"
+Creando un tag:  git tag -a v0.1 -m "Tag de agregando notas al curso de git" 9f8f52b
+consultamos los tags: git tag
+consultamos a que hash está asignado el tag: git show-ref --tags
+pusheamos los tags: git push origin --tags
+para eliminar un tag: git tag -d dormido
+para borrar el tag en el repo de github: git push origin :refs/tags/dormido
+
+/** Manejo de ramas al servidor **/
+git show-branch --all -- Muestra todas las ramas y detalles de sus usos
+gitk -- ayuda visual de que ha pasado en las branchs
+
+/** Clonar repo **/
+git clone https://github.com/MrRickFt/Git-Github.git
