@@ -75,3 +75,8 @@ gitk -- ayuda visual de que ha pasado en las branchs
 
 /** Clonar repo **/
 git clone https://github.com/MrRickFt/Git-Github.git
+
+
+/** Para cuando las embarras y quieres volver a donde todo estaba bien **/
+git reflog -> nos muestra los cambios hechos aunque se halla borrado algo copiamos el log
+git reset --HARD 390a"3 -> reemplazamos "390a"3" por el log al que queremos volver
