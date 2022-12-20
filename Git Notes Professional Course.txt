@@ -80,3 +80,22 @@ git clone https://github.com/MrRickFt/Git-Github.git
 /** Para cuando las embarras y quieres volver a donde todo estaba bien **/
 git reflog -> nos muestra los cambios hechos aunque se halla borrado algo copiamos el log
 git reset --HARD 390a"3 -> reemplazamos "390a"3" por el log al que queremos volver
+
+
+/** cuando haces un commit pero se te olvidó modificar hacer una parte del código que iba junto con ese commit *//
+git commit --amend -> hacemos el cambio que se nos había olvidado y luego ejecutamos el ammend para pegar los 2 cambios en un solo commit
+
+/**** GREP **/
+git grep color -->use la palabra color
+git grep la --> donde use la palabra la
+git grep -n color–> en que lineas use la palabra color
+git grep -n platzi --> en que lineas use la palabra platzi
+git grep -c la --> cuantas veces use la palabra la
+git grep -c paltzi --> cuantas veces use la palabra platzi
+git grep -c “<p>”–> cuantas veces use la etiqueta <p>
+
+git log-S “cabecera” --> cuantas veces use la palabra cabecera en
+todos los commits.
+
+grep–> para los archivos
+log --> para los commits.
